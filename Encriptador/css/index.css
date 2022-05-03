@@ -1,0 +1,67 @@
+/* GLOBAL */
+:root {
+  --blue: #0A3871;
+  --gray: #343A40;
+  --white: #E5E5E5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: var(--white);
+}
+
+button {
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 1rem 2rem 1rem 2rem;
+  border-color: var(--blue);
+  color: var(--blue);
+  background-color: white;
+  border-radius: 2rem;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-encriptar {
+  background-color: var(--blue);
+  border: none;
+  color: white;
+}
+
+.input-container input {
+  color: var(--blue);
+  border: none;
+  font-size: 1.5rem;
+  padding-bottom: 10rem;
+  background-color: var(--white);
+}
+
+header div {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 4rem;
+}
+
+header div img {
+  height: 2rem;
+}
+
+.muñeco-container {
+  display: none;
+}
+
+.output-container {
+  background-color: white;
+  color: var(--gray);
+}

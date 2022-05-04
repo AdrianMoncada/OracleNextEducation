@@ -14,18 +14,26 @@
   
 }
 
+h2 {
+  font-weight: bold;
+}
+
 body {
   background-color: var(--white);
+  margin: 1rem;
 }
 
 button {
-  border-radius: 3px;
+  /* border-radius: 3px; */
   cursor: pointer;
   padding: 1rem 2rem 1rem 2rem;
   border-color: var(--blue);
   color: var(--blue);
   background-color: white;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  border-width: 0.10rem;
+  height: 4rem;
+  width: 100%;
 }
 
 .btns {
@@ -33,28 +41,37 @@ button {
   flex-direction: column;
 }
 
+
 .btn-encriptar {
   background-color: var(--blue);
   border: none;
   color: white;
+  margin-bottom: 1rem;
 }
 
-.input-container input {
+.btn-desencriptar {
+  margin-bottom: 1rem;
+}
+
+::placeholder { 
   color: var(--blue);
+  opacity: 1;
+}
+.input-container input {
+  /* color: var(--blue); */
   border: none;
   font-size: 1.5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 15rem;
   background-color: var(--white);
+  width: 100%;
 }
 
 header div {
-  padding-top: 1rem;
-  padding-left: 1rem;
   padding-bottom: 4rem;
 }
 
 header div img {
-  height: 2rem;
+  height: 2.5rem;
 }
 
 .muñeco-container {
@@ -64,4 +81,54 @@ header div img {
 .output-container {
   background-color: white;
   color: var(--gray);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  body {
+    margin: 3rem;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .input-container input {
+    padding-bottom: 40rem;
+  }
+
+  .output-container {
+    margin-top: 3rem;
+  }
+
+  .logo-container {
+    padding-bottom: 7rem;
+  }
+}
+
+@media (min-width:1025px) {
+  main{
+    display: flex;
+  }
+  .muñeco-container {
+    display: block;
+    width: 100%;
+  }
+  .logo-container {
+    padding-bottom: 1rem;
+  }
+
+  .output-container{
+    width: 20%;
+  }
+
+  .input-container{
+    width: 80%;
+  }
+
 }

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encriptador - Adrián Moncada</title>
   <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/form.js" defer></script>
 </head>
 <body>
   <header>
@@ -17,17 +18,20 @@
   <section class="input-container">
     <label for="input-texto"></label>
     <input type="text" placeholder="Ingrese el texto aqui" id="input-texto" name="texto">
+    <span>Solo letras minúsculas y sin acentos</span>
     <div class="btns">
+    
     <button class="btn-encriptar">Encriptar</button>
     <button class="btn-desencriptar">Desencriptar</button>
   </div>
   </section>
   <section class="output-container">
-    <div class="muñeco-container">
-      <img src="./assets/Muñeco.png" alt="muñeco">
+    <div class="hidden">
+      <img src="./assets/Muñeco.png" alt="muñeco" class="img-muñeco">
     </div>
-    <h2>Ningún mensaje fué encontrado</h2>
-    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+    <h2 class="sinMensajes">Ningún mensaje fué encontrado</h2>
+    <p class="textoAEncriptar">Ingresa el texto que desees encriptar o desencriptar</p>
+    <button class="btn-copiar hidden">Copiar</button>
   </section>
 </main>
 </body>

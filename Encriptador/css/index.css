@@ -14,8 +14,20 @@
   
 }
 
+*:focus {
+  outline: none;
+}
+
+.output-container h2, p {
+  text-align: center;
+}
+
 h2 {
   font-weight: bold;
+}
+
+span {
+  color: var(--gray);
 }
 
 body {
@@ -39,6 +51,7 @@ button {
 .btns {
   display: flex;
   flex-direction: column;
+  margin-top: 0.5rem;
 }
 
 
@@ -74,8 +87,12 @@ header div img {
   height: 2.5rem;
 }
 
-.muñeco-container {
+.hidden {
   display: none;
+}
+
+.img-muñeco {
+  width: 100%;
 }
 
 .output-container {
@@ -124,11 +141,21 @@ header div img {
   }
 
   .output-container{
-    width: 20%;
+    width: 25%;
+    margin-top: -4rem;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
   }
+
+
 
   .input-container{
     width: 80%;
+    margin-left: 10rem;
+    margin-top: 3rem;
   }
 
 }

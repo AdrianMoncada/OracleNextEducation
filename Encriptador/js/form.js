@@ -2,6 +2,7 @@
 const sinMensaje = document.querySelector(".sinMensajes");
 const mensajeAEncriptar = document.querySelector(".textoAEncriptar")
 const botonEncriptar = document.querySelector(".btn-encriptar");
+const botonDesencriptar = document.querySelector(".btn-desencriptar");
 const input = document.querySelector("#input-texto");
 const outputContainer = document.querySelector(".output-container")
 const botonCopiar = document.querySelector(".btn-copiar");
@@ -56,6 +57,20 @@ botonEncriptar.addEventListener("click", function(){
   if(tieneContenido()){
     modificarElementos();
     encriptarMensaje();
+  }
+})
+
+function desencriptarMensaje(){
+  const mensaje = input.value;
+  let re = [/enter/gi,/imes/gi,/ai/gi,/ober/gi,/ufat/gi];
+  let mensajeDesencriptado = mensaje.replace(re[0], 'e').replace(re[1], "i").replace(re[2], "a").replace(re[3], "o").replace(re[4], "u");
+  mensajeAEncriptar.innerText = mensajeDesencriptado;
+}
+
+botonDesencriptar.addEventListener("click", function(){
+  if(tieneContenido()){
+    modificarElementos();
+    desencriptarMensaje();
   }
 })
 

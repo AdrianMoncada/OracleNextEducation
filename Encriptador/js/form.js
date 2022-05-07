@@ -75,10 +75,11 @@ botonDesencriptar.addEventListener("click", function(){
 })
 
 botonCopiar.addEventListener("click", function(){
-  // toDo: Investigar y aplicar método ExecCommand
+    var input = document.createElement("textarea");
+    input.value = mensajeAEncriptar.textContent;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("Copy");
+    input.remove();
 })
 
-// sinMensaje.classList.add("hidden");
-// Si value de input no está vacío. Copiar ese contenido y colocarlo como texto en 
-// el "p" de output-container
-// modificar css del nuevo p para que su texto no esté alineado al centro
